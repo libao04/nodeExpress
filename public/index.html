@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button  id="content">打印helloWorld</button>
+    </div>
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    document.getElementById("content").onclick = function () {
+        console.log('aaas');
+        $.ajax({
+             url:"/common1/getContent",
+             type: "GET",
+             success: function (res) {
+                 
+             },
+             error: function () {
+                 alert("对不起！数据加载失败！");
+             }
+         })
+    }
+      
+        
+    
+    
+</script>
+</html>
